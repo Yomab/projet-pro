@@ -284,10 +284,15 @@ input:not([type]), input[type="text"]:not(.browser-default), input[type="passwor
 .register-form .center, .center-align {
   align-self: center;
 }
+i.material-icons.prefix {
+    margin-left: -25px;
+  color: #3e2723 ;
+}
 
 @media screen and (max-width:1280px) {
-  .prefix {
-    display:none;
+  i.material-icons.prefix {
+    display:unset !important;
+    margin-left: -25px !important;
   }
 }
 .row {
@@ -481,6 +486,13 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
+div.input-field.col.s12  {
+    margin-left: 2rem;
+    width: 89%;
+    width: calc(100% - 3rem);
+
+}
+
 élément {
 }
 .input-field.col .prefix ~ label, .input-field.col .prefix ~ .validate ~ label {
@@ -493,6 +505,10 @@ input:not([type]).validate + label, input[type="text"]:not(.browser-default).val
     margin-left: 2rem;
     width: 92%;
     /* width: calc(100% - 3rem); */
+}
+i.btn.waves-effect.waves-light.col.s6.formInscription.waves-input-wrapper {
+  width: 10rem;
+  text-align: center;
 }
 //finbuttonValidation//
 
