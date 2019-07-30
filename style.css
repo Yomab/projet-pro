@@ -510,6 +510,20 @@ i.btn.waves-effect.waves-light.col.s6.formInscription.waves-input-wrapper {
   width: 10rem;
   text-align: center;
 }
+
+a.btn.waves-effect.waves-light.modal-trigger.col.s6.formInscription {
+  width: 10rem;
+  text-align: center;
+  font-style: normal;
+  font-size: inherit;
+text-transform: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #6c5044;
+}
+
 //finbuttonValidation//
 
 //fin form//
@@ -585,7 +599,11 @@ div.card-content.divCard {
   color: #d3923e;
   text-decoration: #582723 underline;
 }
-
+.h4textstyle2 {
+  color: #d3923e;
+  text-decoration: #582723 underline;
+  margin-left: 1rem;
+}
 img.activator {
   border-radius: 0.5rem;
   border: solid 2px;
@@ -600,6 +618,7 @@ img.activator {
   background-color: #fafafa;
   padding: 0;
   max-height: 80%;
+  height: 80%;
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
@@ -608,7 +627,12 @@ img.activator {
   border: solid 2px;
   border-color: #856106;
 }
-
+.modal.login {
+height: 50%;
+}
+.modal.size {
+height: 40%;
+}
 div.card {
   box-shadow: none ;
 }

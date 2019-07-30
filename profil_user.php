@@ -83,12 +83,22 @@
          <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="valider modification" />
        </div>
        <div class="input-field center col s6 l6">
-         <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="supprimer le compte" />
-       </div>
+<a href="#modalLog" class="btn waves-effect waves-light modal-trigger col s6 formInscription">Supprimer</a>
      </div>
    </form>
  </div>
  </div>
+
+ <div id="modalLog" class="modal size">
+     <div class="modal-content">
+       <h4 class="h4textstyle">Vous êtes sur le point de supprimer le compte, en êtes vous sur ?</h4>
+
+
+     </div>
+     <div class="modal-footer">
+       <a href="#!" class="modal-close waves-effect waves-green btn-flat">supprimer</a>
+     </div>
+   </div>
 
 
 
@@ -97,6 +107,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="assets/materialize.js"></script>
-      <script src="main.js"></script>
+      <script src="assets/main.js"></script>
       </body>
       </html>

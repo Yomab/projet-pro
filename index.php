@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="assets/materialize.css">
@@ -17,7 +17,7 @@
     <a href="#!" class="brand-logo">Normandy Arena</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Agenda</a></li>
+      <li><a href="listEvent.php">Agenda</a></li>
       <li><a href="badges.html">Actualités</a></li>
       <li><a href="collapsible.html">Se lancer</a></li>
       <li class=''><a href="profil_user.php"><i class="material-icons">settings</i></a></li>
@@ -25,7 +25,7 @@
   </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="sass.html">agenda</a></li>
+  <li><a href="listEvent.php">agenda</a></li>
   <li><a href="badges.html">Actualités</a></li>
   <li><a href="collapsible.html">Se lancer</a></li>
   <li class=''><a href=""><i class="material-icons">settings</i></a></li>

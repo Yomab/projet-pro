@@ -76,20 +76,41 @@
          <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="Je m'inscris" />
        </div>
        <div class="input-field center col s6 l6">
-         <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="J'ai déjà un compte" />
+         <a href="#modalLog" class="btn waves-effect waves-light modal-trigger col s6 formInscription">Se connecter</a>
        </div>
      </div>
    </form>
  </div>
  </div>
 
-
+ <div id="modalLog" class="modal login">
+     <div class="modal-content">
+       <h4 class="h4textstyle">Login :</h4>
+       <div class="row margin">
+         <div class="input-field col s12">
+           <i class="material-icons prefix">perm_identity</i>
+           <input id="user_pseudo" name="user_pseudo" type="text" class="validate" required />
+           <label for="user_pseudo" class="center-align brown-text text-darken-4">pseudo:</label>
+        </div>
+       </div>
+       <div class="row margin">
+         <div class="input-field col s12">
+           <i class="material-icons prefix">lock_outline</i>
+           <input id="user_password" name="user_password" type="password" class="validate" required />
+           <label for="user_password" class="center-align brown-text text-darken-4"> Mot de passe :</label>
+         </div>
+       </div>
+     </div>
+     <div class="modal-footer">
+       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Valider</a>
+     </div>
+   </div>
 
 
       <script src = "https://code.jquery.com/jquery-3.4.0.js" integrity = "sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin = "anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="assets/materialize.js"></script>
-      <script src="main.js"></script>
+      <script src="assets/main.js"></script>
       </body>
       </html>
