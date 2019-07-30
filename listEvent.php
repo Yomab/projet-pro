@@ -24,31 +24,34 @@
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="assets/img/imagecard/balise.jpg">
+      <span class="card-title"><p></p><p></p></span>
     </div>
-    <div class="card-content divCard">
-   <span class="card-title activator grey-text text-darken-4"><a class=" modal-trigger" style="; margin-left: auto; margin-right: auto;" href="#modal1"> <img class="responsive-img imgModal" src="assets/img/categories/nouvelevenement.png"></a></span>
+    <div class=" card-content divCard">
+   <span class=" card-title activator  grey-text text-darken-4"><a class=" modal-trigger" style="; margin-left: auto; margin-right: auto;" href="#modal1"> <img class="responsive-img imgModal" src="assets/img/categories/nouvelevenement.png"></a></span>
     </div>
   </div>
   </div>
   </div>
 
+
   <div id="modal1" class="modal">
-    <div class="modal-content stylemod">
+    <div class="modal-content w-100 stylemod">
       <h4 class="h4textstyle">A propos de l'évènement</h4>
-      <p class="ptextstyle">
+      <div class="ptextstyle">
       <ul class="Detail_event">
-      <li>Date :</li>
+      <li>Date : </li>
       <li>Format :</li>
+      <li>Round :</li>
       <li>Lieu :</li>
       <li>Participation :</li>
       <li>cash prize :</li>
       <li>inscription :</li>
       <li>Détail :</li>
     </ul>
-      </p>
+  </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat btnparticip">Participer</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Participer</a>
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fermer</a>
     </div>
   </div>

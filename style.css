@@ -532,14 +532,18 @@ i.btn.waves-effect.waves-light.col.s6.formInscription.waves-input-wrapper {
 }
 élément {
 }
+
 .card .card-content {
     padding: 24px;
     border-radius: 0 0 2px 2px;
 }
+
 élément {
     display: block;
     transform: translateY(-100%);
 }
+
+
 .card .card-reveal{
     padding: 24px;
     position: absolute;
@@ -564,19 +568,49 @@ img.responsive-img.imgModal {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-color: transparent !important;
 }
 
 div.card-content.divCard {
   padding: 0;
 }
+
+@media screen and (max-width:640px) {
 .div.modal-content.stylemod {
   background-color: #996a0e !important;
+  width: 100vw;
 }
-
+}
 .h4textstyle {
   color: #d3923e;
   text-decoration: #582723 underline;
 }
 
+img.activator {
+  border-radius: 0.5rem;
+  border: solid 2px;
+  border-color: #e99d2a;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 80%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+  border-radius: !0.5rem;
+  border: solid 2px;
+  border-color: #856106;
+}
+
+div.card {
+  box-shadow: none ;
+}
 
 //fin diary//
