@@ -109,7 +109,7 @@
    </div>
    <div class="row ">
      <div class="input-field center col s12 l12">
-       <input type="submit" class=" btn waves-effect waves-light col s6 formInscription" value="valider" />
+       <input type="submit" class=" btn waves-effect waves-light col s6 formInscription buttonEventCreate" value="valider" />
      </div>
    </div>
  </form>
