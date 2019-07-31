@@ -280,6 +280,13 @@ input:not([type]), input[type="text"]:not(.browser-default), input[type="passwor
   background-position: center;
   background-repeat: no-repeat;
 }
+.bg2 {
+  background-image: url('assets/img/bodyContent/pageAbig.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1680px;
+}
 
 .register-form .center, .center-align {
   align-self: center;
@@ -638,3 +645,58 @@ div.card {
 }
 
 //fin diary//
+//create event//
+
+.p.FormStyleEvent {
+    line-height: 1.5;
+    font-family: OPTIBelwe-Medium;
+    color: #3e2723;
+    font-weight: normal;
+}
+.center-align.brown-text.text-darken-4.time {
+  font-size: 1rem;
+}
+.material-icons.prefix.select {
+  margin-left: 1rem;
+}
+.col.s12.bg2 {
+  padding-top: 2.5rem;
+}
+
+input.select-dropdown.dropdown-trigger {
+  margin-left: 3.5rem;
+}
+
+input#EventName.validate.eventProperties {
+  width: 87% !important;
+}
+
+input#NumbCaracter.validate.eventProperties {
+  width: 87% !important;
+}
+
+input#EventCreator.validate.eventProperties {
+  width: 87% !important;
+}
+
+input#Creator_email.validate.eventProperties {
+  width: 87% !important;
+}
+
+input#appt.validate.eventProperties {
+  width: 87% !important;
+}
+@media screen and (max-width:640px) {
+  div.input-field.col.s12.HeightSelect {
+    margin-right: auto !important;
+      margin-left: auto !important;
+        }
+  p.center-align.brown-text.text-darken-4 {
+      margin-left: 4rem !important;
+
+}
+p.center-align.brown-text.text-darken-4.labelTitle {
+    margin-left: 1rem !important;
+
+}
+  }
