@@ -687,6 +687,12 @@ input#appt.validate.eventProperties {
   width: 4% !important;
 }
 @media screen and (max-width:640px) {
+  input#appt.validate.eventProperties {
+    width: 19% !important;
+    margin-left:2rem; 
+  }
+}
+@media screen and (max-width:640px) {
   div.input-field.col.s12.HeightSelect {
     margin-right: auto !important;
       margin-left: auto !important;
