@@ -660,7 +660,7 @@ div.card {
   margin-left: 1rem;
 }
 .col.s12.bg2 {
-  padding-top: 2.5rem;
+  padding-top: 4rem;
 }
 
 input.select-dropdown.dropdown-trigger {
@@ -684,7 +684,7 @@ input#Creator_email.validate.eventProperties {
 }
 
 input#appt.validate.eventProperties {
-  width: 87% !important;
+  width: 4% !important;
 }
 @media screen and (max-width:640px) {
   div.input-field.col.s12.HeightSelect {
@@ -700,3 +700,20 @@ p.center-align.brown-text.text-darken-4.labelTitle {
 
 }
   }
+div.datepicker-calendar {
+  background-color: #af6a08 !important;
+}
+div.datepicker-date-display {
+  background-color: #d18a29 !important;
+}
+div#modal-9999d799-04ab-c341-676f-ba9b0bb0b909.modal.datepicker-modal.open {
+  background-color: #af6a08 !important;
+}
+btn-flat.datepicker-cancel.waves-effect {
+  background-color: #bf9035;
+}
+i.btn.waves-effect.waves-light.col.s6.formInscription {
+  margin-top: -250px;
+  margin-left: auto;
+  margin-right: auto;
+}

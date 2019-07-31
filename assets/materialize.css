@@ -8767,7 +8767,7 @@ input[type=range]::-ms-thumb {
 
 .datepicker-table td.is-selected {
   background-color: #26a69a;
-  color: #fff;
+  color: #rgb(184, 99, 12);
 }
 
 .datepicker-table td.is-outside-current-month, .datepicker-table td.is-disabled {
@@ -8866,7 +8866,7 @@ input[type=range]::-ms-thumb {
 }
 
 .text-primary {
-  color: white;
+  color: rgb(130, 96, 9);
 }
 
 /* Clock Digital Display */
@@ -8924,7 +8924,7 @@ input[type=range]::-ms-thumb {
 }
 
 .timepicker-plate {
-  background-color: #eee;
+  background-color: #e9943a;
   border-radius: 50%;
   width: 270px;
   height: 270px;

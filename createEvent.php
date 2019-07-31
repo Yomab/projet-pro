@@ -105,10 +105,10 @@
 <label for="datepicker"></label>
 </div>
 <label class="center-align brown-text text-darken-4 time" for="appt">Heure de début:</label><br/>
-<input type="time" id="appt" name="appt" class="eventProperties validate" min="9:00" max="18:00" required>
+<input type="time" id="appt" name="appt" class="center eventProperties validate" min="9:00" max="18:00" required>
    </div>
    <div class="row ">
-     <div class="input-field center col s6 l6">
+     <div class="input-field center col s12 l12">
        <input type="submit" class=" btn waves-effect waves-light col s6 formInscription" value="valider" />
      </div>
    </div>
