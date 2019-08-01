@@ -689,7 +689,7 @@ input#appt.validate.eventProperties {
 @media screen and (max-width:640px) {
   input#appt.validate.eventProperties {
     width: 19% !important;
-    margin-left:2rem; 
+    margin-left:2rem;
   }
 }
 @media screen and (max-width:640px) {
@@ -722,4 +722,91 @@ i.btn.waves-effect.waves-light.col.s6.formInscription.buttonEventCreate {
   margin-top: -250px;
   margin-left: auto;
   margin-right: auto;
+}
+//lightbox Avatar//
+#single12 {
+font-family: arial, sans-sarif;
+}
+
+#OpenLightBox {
+text-align: center;
+margin-top: 30px;
+width: 100%;
+}
+
+.close {
+display: block;
+position: absolute;
+z-index: 1003;
+top: 0;
+right: 0;
+padding: 4px 7px;
+color: #666;
+border-radius: 0 5px 0 5px;
+border-bottom: 1px solid #bbb;
+border-left: 1px solid #bbb;
+
+
+-webkit-box-shadow: 0 8px 6px -6px black;
+	 -moz-box-shadow: 0 8px 6px -6px black;
+	      box-shadow: 0 2px 1px -1px #fff, -2px 0 1px -1px #fff, inset -2px 0 1px -1px #fff;
+}
+
+.close:hover {
+color: white;
+cursor: pointer;
+
+background: #d94645;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c3c3c), to(#2c2c2c));
+background: -webkit-linear-gradient(top, #d94645, #bd3d3c);
+background: -moz-linear-gradient(top, #3c3c3c, #2c2c2c);
+background: -ms-linear-gradient(top, #3c3c3c, #2c2c2c);
+
+box-shadow: 0 2px 1px -1px #fff, -2px 0 1px -1px #fff, inset 0 0 0 #fff;
+}
+
+.close:active {
+box-shadow: inset 0 2px 3px -2px #000;
+}
+
+.LB-black-overlay {
+display: none;
+position: fixed;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: #000;
+z-index: 1001;
+-moz-opacity: 0.70;
+opacity: .70;
+filter: alpha(opacity=70);
+}
+
+.LB-white-content {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+max-width: 500px;
+max-height: 500px;
+background: #ddd;
+z-index: 1002;
+padding: 10px 26px;
+font-size: 14px;
+overflow-x: auto;
+border-radius: 5px;
+}
+
+#lightboxspan {
+cursor: pointer;
+color: blue;
+}
+
+#lightboxspan:hover {
+color: green;
+}
+
+.divFlexImg {
+  display: flex;
 }

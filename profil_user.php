@@ -21,8 +21,62 @@
    <div class="col s12 center">
       <img class='responsive-img setAvatar'src='assets/img/avatar/chaman.gif'>
     </div>
-    <div class='col s12 center'>
-          <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="modifier avatar" />
+    <div id="fade" class="LB-black-overlay" onclick="if (!is_modal) HideLightBox(); return false;"></div>
+
+  <div id="single12" class="LB-white-content">
+      <div class="thumb-wrapper divFlexImg">
+   <a href="#img1">
+     <img src="assets/img/avatar/chaman.gif" class="thumbnail">
+   </a>
+   <a href="#img2">
+     <img src="assets/img/avatar/chasseur.gif" class="thumbnail">
+   </a>
+   <a href="#img3">
+     <img src="assets/img/avatar/chasseur2.gif" class="thumbnail">
+   </a>
+   <a href="#img4">
+     <img src="assets/img/avatar/demoniste.gif" class="thumbnail">
+   </a>
+   <a href="#img5">
+     <img src="assets/img/avatar/druide.gif" class="thumbnail">
+   </a>
+   <a href="#img6">
+     <img src="assets/img/avatar/guerrier.gif" class="thumbnail">
+   </a>
+   <a href="#img7">
+     <img src="assets/img/avatar/guerrier2.gif" class="thumbnail">
+   </a>
+   <a href="#img8">
+     <img src="assets/img/avatar/mage.gif" class="thumbnail">
+   </a>
+   <a href="#img9">
+     <img src="assets/img/avatar/mage2.gif" class="thumbnail">
+   </a>
+   <a href="#img10">
+     <img src="assets/img/avatar/mage3.gif" class="thumbnail">
+   </a>
+   <a href="#img11">
+     <img src="assets/img/avatar/paladin.gif" class="thumbnail">
+   </a>
+   <a href="#img12">
+     <img src="assets/img/avatar/paladin2.gif" class="thumbnail">
+   </a>
+   <a href="#img13">
+     <img src="assets/img/avatar/prêtre.gif" class="thumbnail">
+   </a>
+   <a href="#img14">
+     <img src="assets/img/avatar/voleur.gif" class="thumbnail">
+   </a>
+
+ </div>
+
+      <div class="close" onclick="HideLightBox(); return false;"></div>
+
+
+    </div>
+
+  <div class='col s12 center'>
+          <input type="submit" class="btn waves-effect waves-light col s6 formInscription" onclick="ShowLightBox('single12'); return false;"value="modifier avatar" />
         </div>
  </div>
  <div id="register-page" class="row ">
