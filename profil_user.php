@@ -19,7 +19,7 @@
   </div>
   <div class="row ">
    <div class="col s12 center">
-      <img class='responsive-img setAvatar'src='assets/img/avatar/chasseur.gif'>
+      <img class='responsive-img setAvatar'src='assets/img/avatar/chaman.gif'>
     </div>
     <div class='col s12 center'>
           <input type="submit" class="btn waves-effect waves-light col s6 formInscription" value="modifier avatar" />
