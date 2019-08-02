@@ -290,6 +290,7 @@ input:not([type]), input[type="text"]:not(.browser-default), input[type="passwor
 
 .register-form .center, .center-align {
   align-self: center;
+  font-size: 13px;
 }
 i.material-icons.prefix {
     margin-left: -25px;
@@ -511,7 +512,7 @@ input:not([type]).validate + label, input[type="text"]:not(.browser-default).val
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .helper-text, .input-field .prefix ~ .autocomplete-content {
     margin-left: 2rem;
     width: 92%;
-    /* width: calc(100% - 3rem); */
+
 }
 i.btn.waves-effect.waves-light.col.s6.formInscription.waves-input-wrapper {
   width: 10rem;
@@ -530,7 +531,9 @@ text-transform: inherit;
   font-size: 11px;
   color: #6c5044;
 }
-
+a.btn.waves-effect.waves-light.col.s6.formInscription {
+width: 12rem;
+}
 //finbuttonValidation//
 
 //fin form//
@@ -638,7 +641,7 @@ img.activator {
 height: 50%;
 }
 .modal.size {
-height: 40%;
+height: 50%;
 }
 div.card {
   box-shadow: none ;
@@ -646,6 +649,22 @@ div.card {
 
 //fin diary//
 //create event//
+.RadioAlign {
+  display: block;
+    padding-left: 20px;
+    text-indent: -20px;
+}
+
+.SpanAlignCreateEvent {
+  width: 11px;
+    height: 11px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
 
 .p.FormStyleEvent {
     line-height: 1.5;
@@ -724,89 +743,395 @@ i.btn.waves-effect.waves-light.col.s6.formInscription.buttonEventCreate {
   margin-right: auto;
 }
 //lightbox Avatar//
-#single12 {
-font-family: arial, sans-sarif;
+body{
+    margin:150px 0 0 0;
+    text-align:center;
+    background: #f1e7b0;
+  }
+  h2{
+    font-size: 32px;
+  }
+  a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 18px;
+  }
+
+  /* Lightbox background */
+  #lightbox {
+    display:none;
+    background: rgba(0,0,0,0.8);
+    position:absolute;
+    top:0px;
+    left:0px;
+    min-width:100%;
+    min-height:100%;
+    z-index:1000;
+  }
+  /* Lightbox panel with some content */
+  #lightbox-panel {
+
+    display:none;
+    position:fixed;
+    top:100px;
+    left:50%;
+    margin-left:-330px;
+    width:50%;
+    background:#d18d2b;
+    padding:10px 15px 10px 15px;
+    border:2px solid #CCCCCC;
+    z-index:1001;
+  }
+ /*titre lightbox */
+  .TitleLighbox {
+  text-align: center;
+  }
+
+  /* Début css carroussel */
+  #slideshow {
+	position: relative;
+	width: 300px;
+	height: 310px;
+	padding: 15px;
+	margin: 0 auto 2em;
+	background: #FFF;
+	/* CSS3 effects */
+	background: #d18d2b;
+	border-radius: 2px 2px 2px 2px;
+	}
+
+#slideshow:before,
+#slideshow:after {
+	position: absolute;
+	bottom:16px;
+	z-index: -10;
+	width: 50%;
+	height: 20px;
+	content: " ";
+	background: rgba(0,0,0,0.1);
+	border-radius: 50%;
+}
+#slideshow:before {
+	left:0;
+	transform: rotate(-4deg);
+}
+#slideshow:after {
+	right:0;
+	transform: rotate(4deg);
 }
 
-#OpenLightBox {
-text-align: center;
-margin-top: 30px;
-width: 100%;
+/* gestion des dimensions et débordement du conteneur */
+#slideshow .container {
+	position:relative;
+	width: 300px;
+	height: 295px;
+	overflow: hidden;
 }
 
-.close {
-display: block;
-position: absolute;
-z-index: 1003;
-top: 0;
-right: 0;
-padding: 4px 7px;
-color: #666;
-border-radius: 0 5px 0 5px;
-border-bottom: 1px solid #bbb;
-border-left: 1px solid #bbb;
 
-
--webkit-box-shadow: 0 8px 6px -6px black;
-	 -moz-box-shadow: 0 8px 6px -6px black;
-	      box-shadow: 0 2px 1px -1px #fff, -2px 0 1px -1px #fff, inset -2px 0 1px -1px #fff;
+   le conteneur des slides
+   en largeur il fait 100% x le nombre de slides
+*/
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 20%;
+	height: 310px;
 }
 
-.close:hover {
-color: white;
-cursor: pointer;
-
-background: #d94645;
-background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c3c3c), to(#2c2c2c));
-background: -webkit-linear-gradient(top, #d94645, #bd3d3c);
-background: -moz-linear-gradient(top, #3c3c3c, #2c2c2c);
-background: -ms-linear-gradient(top, #3c3c3c, #2c2c2c);
-
-box-shadow: 0 2px 1px -1px #fff, -2px 0 1px -1px #fff, inset 0 0 0 #fff;
+/* annulation des marges sur figure */
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
 }
 
-.close:active {
-box-shadow: inset 0 2px 3px -2px #000;
+
+/* fonction d'animation, n'oubliez pas de prefixer ! */
+@keyframes slider {
+	0%, 20%, 100%	{ left: 0 }
+	25%, 45%		{ left: -100% }
+	50%, 70%		{ left: -200% }
+	75%, 95%		{ left: -300% }
+  100%, 120%  { left: -400% }
+  125%, 145%  { left: -500% }
 }
 
-.LB-black-overlay {
-display: none;
-position: fixed;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 100%;
-background-color: #000;
-z-index: 1001;
--moz-opacity: 0.70;
-opacity: .70;
-filter: alpha(opacity=70);
+
+
+@keyframes figcaptionner {
+	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
+	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
 }
 
-.LB-white-content {
-display: none;
-position: fixed;
-top: 50%;
-left: 50%;
-max-width: 500px;
-max-height: 500px;
-background: #ddd;
-z-index: 1002;
-padding: 10px 26px;
-font-size: 14px;
-overflow-x: auto;
-border-radius: 5px;
+/* ajouter à l'élément : */
+#slideshow figcaption {
+	/* ... la propriété animation */
+	animation: figcaptionner 32s infinite;
 }
 
-#lightboxspan {
-cursor: pointer;
-color: blue;
+#slideshow .commands {
+	position: absolute;
+	top: 45%;
+	padding: 5px 13px;
+	border-bottom:0;
+	font-size: 1.3em;
+	color: #aaa;
+	text-decoration:none;
+	background-color: #eee;
+	background-image: linear-gradient(#fff,#ddd);
+	text-shadow: 0 0 1px #aaa;
+	border-radius: 50%;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-#lightboxspan:hover {
-color: green;
+#slideshow .prev { left: -48px; }
+#slideshow .next { right: -48px; }
+
+#slideshow .commands { display:none; }
+#slideshow .commands1 {	display: block; }
+
+#slideshow .c_slider {
+	position: absolute;
+	left:10px; top:0;
+	width: 85%;
+	height: 300px;
+	/* multiple background */
+	background:
+	            url(assets/img/avatar/chaman.gif) no-repeat,
+	            url(assets/img/avatar/chasseur.gif) no-repeat,
+	            url(assets/img/avatar/chasseur2.gif) no-repeat,
+              url(assets/img/avatar/demoniste.gif) no-repeat,
+              url(assets/img/avatar/druide.gif) no-repeat,
+              url(assets/img/avatar/guerrier.gif) no-repeat,
+              url(assets/img/avatar/guerrier2.gif) no-repeat,
+              url(assets/img/avatar/mage.gif) no-repeat,
+              url(assets/img/avatar/mage2.gif) no-repeat,
+              url(assets/img/avatar/mage3.gif) no-repeat,
+              url(assets/img/avatar/paladin.gif) no-repeat,
+              url(assets/img/avatar/paladin2.gif) no-repeat,
+              url(assets/img/avatar/prêtre.gif) no-repeat,
+              url(assets/img/avatar/voleur.gif) no-repeat;
+
+
+	transition: background 1s;
 }
 
-.divFlexImg {
-  display: flex;
+/* on cache le slider */
+.sl_i:target ~ #slideshow .slider									{ visibility: hidden }
+/* on planque la 1ère pastille (cf. bonux suivant) */
+.sl_i:target ~ #slideshow .dots_commands li:first-child a:after		{ display:none; }
+/* pour afficher la 2ème pastille (cf. bonux suivant) */
+.sl_i:target ~ #slideshow .dots_commands li:first-child a:before	{ display:block; }
+
+/* lorsque on cible le premier slider */
+/* on cache tous les "précédent" et "suivant" */
+#sl_i1:target ~ #slideshow .commands								{ display: none; }
+/* on affiche seulement deux flèches */
+#sl_i1:target ~ #slideshow .commands1								{ display: block; }
+/* correspond au décalage des images */
+#sl_i1:target ~ #slideshow .c_slider								{ background-position: 0 0, 640px 0, 1280px 0, 1920px 0,2560px 0,3200px 0,3840px 0,4480px 0,5120px 0,5760px 0,6400px 0,7040px 0,7680px 0,8320px 0; }
+/* on place la pastille tout à gauche */
+#sl_i1:target ~ #slideshow .dots_commands li:first-child a:before	{ left:0; }
+
+/* même procédé lorsqu'on cible le second slide */
+#sl_i2:target ~ #slideshow .commands								{ display: none; }
+
+#sl_i2:target ~ #slideshow .commands2								{ display: block; }
+#sl_i2:target ~ #slideshow .c_slider								{ background-position: -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0, 5120px 0, 5760px 0, 6400px 0, 7040px 0, 7680px 0; }
+#sl_i2:target ~ #slideshow .dots_commands li:first-child a:before	{ left:18px; }
+
+/* puis le 3ème */
+#sl_i3:target ~ #slideshow .commands								{ display: none; }
+#sl_i3:target ~ #slideshow .commands3								{ display: block; }
+#sl_i3:target ~ #slideshow .c_slider								{ background-position: -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0, 5120px 0, 5760px 0, 6400px 0, 7040px 0; }
+#sl_i3:target ~ #slideshow .dots_commands li:first-child a:before	{ left:36px; }
+
+/* le 4ème */
+#sl_i4:target ~ #slideshow .commands								{ display: none; }
+#sl_i4:target ~ #slideshow .commands4								{ display: block; }
+#sl_i4:target ~ #slideshow .c_slider								{ background-position: -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0, 5120px 0, 5760px 0, 6400px 0; }
+#sl_i4:target ~ #slideshow .dots_commands li:first-child a:before	{ left:54px; }
+
+/* le 5ème */
+#sl_i5:target ~ #slideshow .commands								{ display: none; }
+#sl_i5:target ~ #slideshow .commands5								{ display: block; }
+#sl_i5:target ~ #slideshow .c_slider								{ background-position: -640px 0, -1280px 0, -1920px 0,-2560px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0, 5120px 0, 5760px 0; }
+#sl_i5:target ~ #slideshow .dots_commands li:first-child a:before	{ left:72px; }
+
+/* le 6ème */
+#sl_i6:target ~ #slideshow .commands								{ display: none; }
+#sl_i6:target ~ #slideshow .commands6								{ display: block; }
+#sl_i6:target ~ #slideshow .c_slider								{ background-position: -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0, 5120px 0;  }
+#sl_i6:target ~ #slideshow .dots_commands li:first-child a:before	{ left:90px; }
+
+/* le 7ème */
+#sl_i7:target ~ #slideshow .commands								{ display: none; }
+#sl_i7:target ~ #slideshow .commands7								{ display: block; }
+#sl_i7:target ~ #slideshow .c_slider								{ background-position: -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0, 4480px 0;  }
+#sl_i7:target ~ #slideshow .dots_commands li:first-child a:before	{ left:108px; }
+
+/* le 8ème */
+#sl_i8:target ~ #slideshow .commands								{ display: none; }
+#sl_i8:target ~ #slideshow .commands8								{ display: block; }
+#sl_i8:target ~ #slideshow .c_slider								{ background-position:-4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0, 3840px 0;  }
+#sl_i8:target ~ #slideshow .dots_commands li:first-child a:before	{ left:126px; }
+
+/* le 9ème */
+#sl_i9:target ~ #slideshow .commands								{ display: none; }
+#sl_i9:target ~ #slideshow .commands9								{ display: block; }
+#sl_i9:target ~ #slideshow .c_slider								{ background-position:-5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0, 3200px 0;  }
+#sl_i9:target ~ #slideshow .dots_commands li:first-child a:before	{ left:144px; }
+
+/* le 10ème */
+#sl_i10:target ~ #slideshow .commands								{ display: none; }
+#sl_i10:target ~ #slideshow .commands10								{ display: block; }
+#sl_i10:target ~ #slideshow .c_slider								{ background-position:-5760px 0, -5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0, 2560px 0;  }
+#sl_i10:target ~ #slideshow .dots_commands li:first-child a:before	{ left:162px; }
+
+/* le 11ème */
+#sl_i11:target ~ #slideshow .commands								{ display: none; }
+#sl_i11:target ~ #slideshow .commands11								{ display: block; }
+#sl_i11:target ~ #slideshow .c_slider								{ background-position:-6400px 0, -5760px 0, -5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0, 1920px 0;  }
+#sl_i11:target ~ #slideshow .dots_commands li:first-child a:before	{ left:180px; }
+
+/* le 12ème */
+#sl_i12:target ~ #slideshow .commands								{ display: none; }
+#sl_i12:target ~ #slideshow .commands12								{ display: block; }
+#sl_i12:target ~ #slideshow .c_slider								{ background-position:-7040px 0, -6400px 0, -5760px 0, -5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0, 1280px 0;  }
+#sl_i12:target ~ #slideshow .dots_commands li:first-child a:before	{ left:198px; }
+
+/* le 13ème */
+#sl_i13:target ~ #slideshow .commands								{ display: none; }
+#sl_i13:target ~ #slideshow .commands13								{ display: block; }
+#sl_i13:target ~ #slideshow .c_slider								{ background-position:-7680px 0, -7040px 0, -6400px 0, -5760px 0, -5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0, 640px 0;  }
+#sl_i13:target ~ #slideshow .dots_commands li:first-child a:before	{ left:216px; }
+
+* le 14ème */
+#sl_i14:target ~ #slideshow .commands								{ display: none; }
+#sl_i14:target ~ #slideshow .commands14								{ display: block; }
+#sl_i14:target ~ #slideshow .c_slider								{ background-position:-8320px 0, -7680px 0, -7040px 0, -6400px 0, -5760px 0, -5120px 0, -4480px 0, -3840px 0, -3200px 0, -2560px 0, -1920px 0, -1280px 0, -640px 0, 0 0;  }
+#sl_i14:target ~ #slideshow .dots_commands li:first-child a:before	{ left:234px; }
+
+.dots_commands  {
+	padding:0;
+	margin:10px 0 0;
+	text-align: center;
+}
+.dots_commands li {
+	display: inline;
+	padding:0; margin:0;
+}
+.dots_commands a {
+	position: relative;
+	display: inline-block;
+	height: 8px; width: 8px;
+	margin: 0 3.5px;
+	text-indent: -9999px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
+
+}
+/* quelques styles au focus */
+.dots_commands a:focus {
+	outline: none;
+	background: orange;
+}
+.dots_commands li:first-child a { z-index: 25; }
+
+/* on style after et before, on utilisera les deux */
+.dots_commands li:first-child a:after,
+.dots_commands li:first-child a:before {
+	position: absolute;
+	top: 0; left: 0;
+	content: " ";
+	width: 8px; height: 8px;
+	background: #bd9b83;
+	z-index:20;
+
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
+}
+
+/* on cache "before", on l'utilise uniquement au clic (cf. bonux précédent) */
+.dots_commands li:first-child a:before { display:none; }
+
+/* c'est parti pour l'animation ! */
+@keyframes dotser {
+	0%, 100% 	{ opacity: 1; left: 0; 		}
+
+	20%			{ opacity: 1; left: 0;		}
+	22%			{ opacity: 0; left: 0;		}
+	23%			{ opacity: 0; left: 18px;	}
+	25%			{ opacity: 1; left: 18px;	}
+
+	45%			{ opacity: 1; left: 18px;	}
+	47%			{ opacity: 0; left: 18px;	}
+	48%			{ opacity: 0; left: 36px;	}
+	50%			{ opacity: 1; left: 36px;	}
+
+	70%			{ opacity: 1; left: 36px;	}
+	72%			{ opacity: 0; left: 36px;	}
+	73%			{ opacity: 0; left: 54px;	}
+	75%			{ opacity: 1; left: 54px;	}
+
+	95%			{ opacity: 1; left: 54px;	}
+	97%			{ opacity: 0; left: 54px;	}
+	98%			{ opacity: 0; left: 72px;	}
+  100%    { opacity: 1; left: 72px; }
+
+  120%    { opacity: 1; left: 90px; }
+  122%    { opacity: 0; left: 90px  }
+  123%    { opacity: 0; left: 108px }
+  125%    { opacity: 1; left: 108px }
+
+  145%    { opacity: 1; left: 126px }
+  147%    { opacity: 0; left: 126px }
+  148%    { opacity: 0; left: 0;    }
+  150%    { opacity: 1; left: 0;    }
+}
+
+.imgCenter {
+  margin-left: 1rem;
+}
+@media screen and (max-width: 640px) {
+  #lightbox-panel {
+    margin-left: -150px;
+    width: 83%;
+  }
+
+.c_slider {
+
+
+  width: 320px !important;
+}
+section#slideshow {
+  width: 270px;
+}
+#slideshow::before, #slideshow::after {
+  width: 80%;
+}
+div.container {
+  margin-left: -15px !important;
+  min-width: 70% !important;
+}
+#slideshow .container {
+  width: 110% !important;
+}
+
+.dots_commands a {
+	position: sticky;
+	display: inline-block;
+	height: 8px; width: 8px;
+	margin: 0 3.5px;
+	text-indent: -9999px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
+
+}
+a#close-panel {
+  margin-top: -1.5rem;
+}
 }

@@ -23,7 +23,6 @@
    <form id="registerForm" class="register-form center-align" method="post" action="">
      <div class="row margin">
        <div class="input-field col s12">
-         <i class="material-icons prefix">perm_identity</i>
          <input id="EventName" name="EventName" type="text" class="validate eventProperties" required />
          <label for="EventName" class="center-align brown-text text-darken-4">Titre de l'événement :</label>
        </div>
@@ -31,65 +30,98 @@
 
      <div class="input-field col s12 HeightSelect">
      <p class="center-align brown-text text-darken-4">Mode de tournoi</p>
-<select multiple>
-      <option value="" disabled selected></option>
-      <option value="1">Online</option>
-      <option value="2">En salle</option>
-    </select>
+     <p>
+    <label>
+      <input class="RadioAlign" name="group1" type="radio" />
+      <span class="SpanAlignCreateEvent">OnLine</span>
+    </label>
+  </p>
+  <p>
+ <label>
+   <input class="RadioAlign" name="group1" type="radio" />
+   <span class="SpanAlignCreateEvent">EnSalle</span>
+ </label>
+</p>
+
+
   </div>
   <div class="input-field col s12 HeightSelect">
-    <p class="center-align brown-text text-darken-4 labelTitle">Organisation</p>
- <select multiple class="selStyle">
-   <option value="" disabled selected></option>
-   <option value="1">Entrée Libre</option>
-   <option value="2">Sur invitation</option>
- </select>
- <label ></label>
+    <p class="center-align brown-text text-darken-4 labelTitle">Entrée</p>
+    <p>
+   <label>
+     <input class="RadioAlign" name="group2" type="radio" />
+     <span class="SpanAlignCreateEvent">Libre</span>
+   </label>
+   </p>
+   <p>
+   <label>
+   <input class="RadioAlign" name="group2" type="radio" />
+   <span class="SpanAlignCreateEvent">Invitation</span>
+   </label>
+   </p>
 </div>
 <div class="input-field col s12 HeightSelect">
   <p class="center-align brown-text text-darken-4 labelTitle">Format</p>
-<select multiple>
- <option value="" disabled selected></option>
- <option value="1">Standard</option>
- <option value="2">Wild</option>
-</select>
- <label ></label>
+  <p>
+  <label>
+   <input class="RadioAlign" name="group3" type="radio" />
+   <span class="SpanAlignCreateEvent">Standard</span>
+  </label>
+  </p>
+  <p>
+  <label>
+  <input class="RadioAlign" name="group3" type="radio" />
+  <span class="SpanAlignCreateEvent">Wild</span>
+  </label>
+  </p>
 </div>
 <div class="input-field col s12 HeightSelect">
   <p class="center-align brown-text text-darken-4 labelTitle">Round</p>
-<select multiple>
- <option value="" disabled selected></option>
- <option value="1">Swiss</option>
- <option value="2">Eliminatoire</option>
-</select>
- <label></label>
+  <p>
+  <label>
+   <input class="RadioAlign" name="group1" type="radio" />
+   <span class="SpanAlignCreateEvent">Swiss</span>
+  </label>
+  </p>
+  <p>
+  <label>
+  <input class="RadioAlign" name="group1" type="radio" />
+  <span class="SpanAlignCreateEvent">Eliminatoires</span>
+  </label>
+  </p>
 </div>
 <div class="row margin">
   <div class="input-field col s12">
-    <i class="material-icons prefix">perm_identity</i>
+    <!-- <i class="material-icons prefix">perm_identity</i> -->
     <input id="NumbCaracter" name="NumbCaracter" type="number" class="validate eventProperties" required />
     <label for="NumbCaracter" class="center-align brown-text text-darken-4">Nombre Max Participants :</label>
   </div>
 </div>
 <div class="input-field col s12 HeightSelect">
   <p class="center-align brown-text text-darken-4 labelTitle">Cash Prize</p>
-<select multiple>
- <option value="" disabled selected></option>
- <option value="1">Oui</option>
- <option value="2">Non</option>
-</select>
-<label></label>
+  <p>
+  <label>
+   <input name="group1" type="radio" />
+   <span class="SpanAlignCreateEvent">oui</span>
+  </label>
+  </p>
+  <p>
+  <label>
+  <input name="group1" type="radio" />
+  <span class="SpanAlignCreateEvent">non</span>
+  </label>
+  </p>
 </div>
 <div class="row margin">
   <div class="input-field col s12">
-    <i class="material-icons prefix">perm_identity</i>
+    <!-- <i class="material-icons prefix">perm_identity</i> -->
     <input id="EventCreator" name="EventCreator" type="text" class="validate eventProperties" required />
     <label for="EventCreator" class="center-align brown-text text-darken-4">Nom de l'organisateur :</label>
   </div>
 </div>
 <div class="row margin">
   <div class="input-field col s12">
-    <i class="material-icons prefix">mail</i>
+    <!-- <i class="material-icons prefix">mail</i> -->
     <input id="Creator_email" name="Creator_email" type="email" class="validate eventProperties" required />
     <label for="Creator_email" class="center-align brown-text text-darken-4">Email :</label>
   </div>
