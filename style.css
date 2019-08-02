@@ -703,7 +703,7 @@ input#Creator_email.validate.eventProperties {
 }
 
 input#appt.validate.eventProperties {
-  width: 4% !important;
+  width: 10% !important;
 }
 @media screen and (max-width:640px) {
   input#appt.validate.eventProperties {
